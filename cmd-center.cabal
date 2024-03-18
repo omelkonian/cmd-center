@@ -1,0 +1,32 @@
+name: cmd-center
+version: 0.1.0.0
+cabal-version: >=1.10
+build-type: Simple
+maintainer: Orestis Melkonian <melkon.or@gmail.com>
+stability: experimental
+homepage: http://github.com/omelkonian/cmd-center/
+bug-reports: http://github.com/omelkonian/cmd-center/issues
+category: bash scripts
+synopsis: Lifting bash functions to executable scripts.
+description:
+  This program parses a bash script, discovers all function definitions and
+  produces a single executable script/entrypoint which takes as first argument
+  the function to execute with the rest of the arguments.
+author: Orestis Melkonian
+extra-source-files:
+    README.md
+
+source-repository head
+    type: git
+    location: git://github.com/omelkonian/cmd-center.git
+
+executable cmd-center
+    hs-source-dirs: .
+    main-is: Main.hs
+    build-depends:
+      base >=4.7 && <5,
+      language-bash,
+      directory
+    ghc-options: -Wall
+    default-language: Haskell2010
+    default-extensions:

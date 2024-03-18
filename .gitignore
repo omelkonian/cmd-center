@@ -1,0 +1,5 @@
+# Haskell
+*.hi
+*.o
+# Cabal
+dist-newstyle/
